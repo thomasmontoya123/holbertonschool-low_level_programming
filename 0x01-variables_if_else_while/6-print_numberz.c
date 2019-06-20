@@ -10,12 +10,12 @@ int main(void)
 
 	c = 48;
 
-	while (c <= 59)
+	while (c < 58)
 	{
 		putchar(c);
 		c++;
 	}
-	putchar(10);
+	putchar('\n');
 
 
 	return (0);
