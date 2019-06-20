@@ -14,24 +14,24 @@ int main(void)
 
 	while (a <= '9')
 	{
-		while (b <= '9')
-		{
+	while (b <= '9')
+	{
 
-				putchar(a);
-				putchar(b);
-				if (a == '9' && b == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			b++;
-		}
-		b = '0';
-		a++;
+	putchar(a);
+	putchar(b);
+	if (a == '9' && b == '9')
+	{
+	putchar('\n');
+	}
+	else
+	{
+	putchar(',');
+	putchar(' ');
+	}
+	b++;
+	}
+	b = '0';
+	a++;
 	}
 	return (0);
 }
