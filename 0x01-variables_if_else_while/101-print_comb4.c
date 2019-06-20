@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - print numbers from 00 to 99.
-(*
- * Return: 0 on success
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
