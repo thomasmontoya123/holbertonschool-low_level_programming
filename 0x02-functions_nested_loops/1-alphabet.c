@@ -1,16 +1,15 @@
-# include "holberton.h"
-/* more headers goes there */
+#include <holberton.h>
 
-/* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * print_alphabet - print_alphabet
  *
- * Return: Always 0 (Success)
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
  */
-int main(void)
-{
-char c = 'a';
 
+void print_alphabet(void)
+{
 while (c <= 'z')
 {
 _putchar(c);
@@ -19,3 +18,4 @@ c++;
 _putchar('\n');
 return (0);
 }
+
