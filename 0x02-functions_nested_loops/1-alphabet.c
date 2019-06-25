@@ -1,21 +1,18 @@
-#include <holberton.h>
+#include "holberton.h"
 
 /**
- * print_alphabet - print_alphabet
+ * print_alphabet -  alphabet  lowercase
  *
- * Description: Longer description of the function)?
-(* section header: Section description)*
- * Return: Description of the returned value
  */
-
 void print_alphabet(void)
 {
-while (c <= 'z')
-{
-_putchar(c);
-c++;
-}
-_putchar('\n');
-return (0);
-}
+	int c;
 
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		_putchar(c);
+	}
+
+	_putchar('\n');
+
+}
