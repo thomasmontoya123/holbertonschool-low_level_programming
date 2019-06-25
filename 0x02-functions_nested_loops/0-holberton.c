@@ -1,22 +1,18 @@
 #include "holberton.h"
+
 /**
- * main -  Hello, World
- *
+ * main -  holberton
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 char c[] = "Holberton";
 
 int a;
 
-a = 0;
-
-while (a < 9)
+for (a = 0; c[a] != '\0'; a++)
 {
 _putchar(c[a]);
-a++;
 }
 _putchar('\n');
 return (0);
