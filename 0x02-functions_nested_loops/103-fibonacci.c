@@ -21,7 +21,6 @@ if (f % 2 == 0)
 
 sum = sum + a;
 
-printf("%li (%li), ", a, sum);
 first  = sec;
 
 sec = a;
@@ -34,4 +33,3 @@ printf("%li\n", sum);
 
 return (0);
 }
-
