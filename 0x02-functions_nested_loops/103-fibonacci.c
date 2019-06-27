@@ -17,7 +17,7 @@ int main(void)
 
 	d = 0;
 
-	while (a < max && b < max)
+	while (a < top && b < top)
 	{
 		if ((b % 2) == 0)
 			c += b;
