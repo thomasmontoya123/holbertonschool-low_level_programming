@@ -1,28 +1,30 @@
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
+* main - descrip
+*Return: 0 (success)
+*/
 int main(void)
 {
-long sum = 0;
-long first = 0;
-long sec = 1;
-long a = 1;
+	long a, b, c, d, top;
 
+	top = 4000000;
 
-do {
-if (a % 2 == 0)
-sum = sum + a;
-printf("%li (%li), ", a, sum);
-first = sec;
-sec = a;
-a = first + sec;
+	a = 1;
 
-} while (a < 4000001);
+	b = 2;
 
-printf("%li\n", sum);
+	c = 0;
 
-return (0);
+	d = 0;
+
+	while (a < max && b < max)
+	{
+		if ((b % 2) == 0)
+			c += b;
+			d = a + b;
+			a = b;
+			b = d;
+	}
+	printf("%ld\n", c);
+	return (0);
 }
