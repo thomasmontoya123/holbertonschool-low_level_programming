@@ -2,7 +2,7 @@
 
 /**
  * rev_string  - function that reverse string
- * @s: string 
+ * @s: string
  *   (* a blank line
  *    * Description: Longer description of the function)?
  *    (* section header: Section description)*
@@ -12,8 +12,9 @@
 void rev_string(char *s)
 {
 	int a, b;
+
 	b = 0;
-	a = 0; 
+	a = 0;
 
 	char temp;
 
@@ -21,7 +22,6 @@ void rev_string(char *s)
 	{
 		a++;
 	}
-		
 
 	for (a = a - 1; b < a; a--)
 	{
