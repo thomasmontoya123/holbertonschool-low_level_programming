@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * _strlen - function that returns the length of a string
+ * _puts - function that prints
  * and updates the value
- * @s: integer value for the function
+ * @str: integer value for the function
  *   (* a blank line
  *    * Description: Longer description of the function)?
  *    (* section header: Section description)*
- * Return:the size
+ * Return: void
  *
  */
 void _puts(char *str)
@@ -19,7 +19,6 @@ void _puts(char *str)
 		_putchar(str[a]);
 		a++;
 	}
-	
 	_putchar('\n');
 }
 
