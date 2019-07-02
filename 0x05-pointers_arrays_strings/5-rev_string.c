@@ -12,22 +12,21 @@
 void rev_string(char *s)
 {
 	int a, b;
+	char temp[500];
 
-	b = 0;
 	a = 0;
-
-	char temp;
-
-	while (s[a] != 0)
+	b = 0;
+	
+	while (s[a] != '\0')
 	{
+		temp[a] = s[a];
 		a++;
 	}
-
-	for (a = a - 1; b < a; a--)
+	a = a - 1;
+	while (a >= 0)
 	{
-		temp = s[a];
-		s[a] = s[b];
-		s[b] = temp;
+		s[a] = temp[b];
+		a--;
 		b++;
 	}
 }
