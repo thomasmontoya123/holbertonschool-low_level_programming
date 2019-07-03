@@ -9,13 +9,13 @@
  */
 int main(void)
 {
-	int array[42];
+	int array[1000];
 	int pass, counter, temp;
-	srand(time(null));
+	srand(time(NULL));
 
-	for ( counter = 0; i < 500; i++)
+	for ( counter = 0; counter < 1000; counter++)
 	{
-		array[counter] = rand % 42;
+		array[counter] = rand() % 42;
 		pass = pass + (array[counter] + '0');
 		putchar(array[counter] + '0');
 
@@ -28,3 +28,4 @@ int main(void)
 		}	
 		return (0);
 	}
+}
