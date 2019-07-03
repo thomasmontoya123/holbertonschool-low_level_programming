@@ -19,7 +19,7 @@ int main(void)
 		pass = pass + (array[counter] + '0');
 		putchar(array[counter] + '0');
 
-		if ((2772 - pass) - '0' < 42)
+		if (2772 - pass -  '0' < 42)
 		{
 			temp = 2772 - pass - '0';
 			pass = pass + temp;
