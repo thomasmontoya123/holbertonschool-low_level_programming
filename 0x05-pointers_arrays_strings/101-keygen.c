@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int array[1000];
+	int array[42];
 	int pass, counter, temp;
 	srand(time(null));
 
