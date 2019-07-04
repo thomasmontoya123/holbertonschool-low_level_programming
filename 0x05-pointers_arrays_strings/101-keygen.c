@@ -9,23 +9,27 @@
  */
 int main(void)
 {
-	int array[1000];
-	int pass, counter, temp;
+	int a;
+	int buf;
+	int number = 0;
+	int table[500];
+
 	srand(time(NULL));
 
-	for ( counter = 0; counter < 1000; counter++)
+	for (a = 0; a < 500; a++)
 	{
-		array[counter] = rand() % 42;
-		pass = pass + (array[counter] + '0');
-		putchar(array[counter] + '0');
+		table[a] = rand() % 43;
+		number = number + (table[a] + '0');
+		putchar(table[a] + '0');
 
-		if (2772 - pass -  '0' < 42)
+		if ((2772 - number) - 0 < 43)
 		{
-			temp = 2772 - pass - '0';
-			pass = pass + temp;
-			putchar(temp + '0');
+			buf = 2772 - number - '0';
+			number = number + buf;
+			putchar(buf + '0');
 			break;
-		}	
-		return (0);
+		}
+		
 	}
+	return(0);
 }
