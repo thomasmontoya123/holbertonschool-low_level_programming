@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
- * _strcat - concatenate two strings
+ * _strncat - concatenate two strings to n
  * @src: array source
  * @dest: array destination
+ * @n: determinate second string
  *   (* a blank line
  *    * Description: Longer description of the function)?
  *    (* section header: Section description)*
  * Return: string
  *
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int a = 0;
 	int b = 0;
@@ -18,7 +19,8 @@ char *_strcat(char *dest, char *src)
 	{
 		a++;
 	}
-	while (src[b] != 0)
+
+	while (src[b] != 0 && b < n)
 	{
 		dest[a] = src[b];
 		a++;
@@ -26,5 +28,9 @@ char *_strcat(char *dest, char *src)
 	}
 
 	return (dest);
-
 }
+
+
+
+
+
