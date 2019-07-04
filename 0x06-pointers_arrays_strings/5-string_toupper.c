@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * string_toupper - function that reverse string
- * @t: string
+ * *string_toupper - function that reverse string
+ * @s: string
  *   (* a blank line
  *    * Description: Longer description of the function)?
  *    (* section header: Section description)*
