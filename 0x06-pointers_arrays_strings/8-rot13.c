@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * root13 - encodes into root13
+ * *root13 - encodes into root13
  * @cypher: translation
  *   (* a blank line
  *    * Description: Longer description of the function)?
@@ -12,7 +12,7 @@ char *rot13(char *cypher)
 {
 	int a;
 	int b;
-	char in[] ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char trans[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 
