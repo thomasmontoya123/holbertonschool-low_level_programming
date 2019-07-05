@@ -12,7 +12,8 @@ char *leet(char *trad)
 {
 	int n;
 	int a;
-	char  letter[5][2] = {{'a', 'A'}, {'e', 'E'}, {'o', 'O'}, {'t', 'T'}, {'l', 'L'}};
+	char  letter[5][2] = {{'a', 'A'}, {'e', 'E'},
+	{'o', 'O'}, {'t', 'T'}, {'l', 'L'}};
 	char  numtable[] = {'4', '3', '0', '7', '1'};
 
 	for (a = 0; trad[a] != '\0'; a++)
