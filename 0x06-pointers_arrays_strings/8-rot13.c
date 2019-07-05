@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * *root13 - encodes into root13
+ * rot13 - encodes into root13
  * @cypher: translation
  *   (* a blank line
  *    * Description: Longer description of the function)?
