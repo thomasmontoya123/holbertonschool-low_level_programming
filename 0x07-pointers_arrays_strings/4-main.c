@@ -8,10 +8,11 @@
  */
 int main(void)
 {
-    char *s = "hello";
-    char *f;
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
 
-    f = _strchr(s, 'a');
-    printf("%s\n", f);
+    t = _strpbrk(s, f);
+    printf("%s\n", t);
     return (0);
 }
