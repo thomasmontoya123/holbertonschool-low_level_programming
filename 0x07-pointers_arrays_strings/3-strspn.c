@@ -12,6 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 	int i, j;
 	int acceptsize;
 	int repeats = 0;
+	int breaker = 0;
 
 	for (acceptsize = 0; accept[acceptsize] != 0; acceptsize++)
 	{
@@ -24,8 +25,13 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				repeats++;
+				breaker = 1;
 			}
 
+		}
+		if (breaker == 0)
+		{
+			break;
 		}
 
 	}

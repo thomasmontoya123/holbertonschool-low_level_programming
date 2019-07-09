@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * _memset - fills memory with constant
+ * _memcpy - fills memory with constant
  * @dest: destination copy
- * @src: source 
+ * @src: source
  * @n: value for function
  *    (* section header: Section description)*
  *     * Return: dest
@@ -10,12 +10,14 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	while (n > 0)
+	char buf;
+	int i = 0;
+
+	while (i < n)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		n--;
+		buf = src[i];
+		dest[i] = buf;
+		i++;
 	}
 	return (dest);
 }
