@@ -10,15 +10,10 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
-	int acceptsize;
 	int repeats = 0;
 	int breaker = 0;
 
-	for (acceptsize = 0; accept[acceptsize] != 0; acceptsize++)
-	{
-		;
-	}
-	for (i = 0;  i <= acceptsize ; i++)
+	for (i = 0; s[i] != '\0' && s < accept; i++)
 	{
 		for (j = 0; accept[j] != '\0'; j++)
 		{
@@ -27,14 +22,11 @@ unsigned int _strspn(char *s, char *accept)
 				repeats++;
 				breaker = 1;
 			}
-
 		}
 		if (breaker == 0)
 		{
 			break;
 		}
-
 	}
-
 	return (repeats);
 }
