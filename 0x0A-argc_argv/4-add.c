@@ -1,32 +1,32 @@
 #include "stdlib.h"
 #include <stdio.h>
 /**
- * main - entry
- * @argc: number of command args
- * @argv: string of commands
+ * main - Entry
  *
- * return: 0
+ * @argc: argument count
+ * @argv: argument values vector.
+ *
+ * Return: 1 for error
  */
-
-int main (int argc, char * argv[])
+int main(int argc, char *argv[])
 {
-    int argcount;
+	int argcount;
 	int strnum;
 	int result = 0;
 	int buf;
 
-	for ( argcount = 1; argcount < argc; argcount++)
+	for (argcount = 1; argcount < argc; argcount++)
 	{
 		buf = 0;
-		for ( strnum = 0; argv[argcount][strnum] != '\0'; strnum++)
+		for (strnum = 0; argv[argcount][strnum] != '\0'; strnum++)
 		{
-			if (argv [argcount][strnum] >= '0' && argv[argcount][strnum] <= '9')
+			if (argv[argcount][strnum] >= '0' && argv[argcount][strnum] <= '9')
 			{
 				buf = buf * 10  + argv[argcount][strnum] - '0';
 			}
 			else
 			{
-				printf ("Error \n");
+				printf("Error \n");
 				return (1);
 			}
 

@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
- * main - entry
- * @argc: number of command args
- * @argv: string of commands
+ * main - Entry
  *
- * return: 0
+ * @argc: argument count
+ * @argv: argument values vector.
+ *
+ * Return: 0 always
  */
-
 int main(int argc, char *argv[])
 {
 	(void) argc;
