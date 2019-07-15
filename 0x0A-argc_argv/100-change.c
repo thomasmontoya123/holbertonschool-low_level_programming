@@ -13,6 +13,11 @@ int changes(char *money)
 	int menuda = atoi(money);
 	int coins = 0;
 
+		if (menuda < 0)
+		{
+			return (0);
+
+		}
 		if ((menuda / 25) >= 0)
 		{
 			coins += menuda / 25;
