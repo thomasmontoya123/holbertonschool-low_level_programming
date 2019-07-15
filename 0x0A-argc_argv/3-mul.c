@@ -11,14 +11,22 @@
 int main(int argc, char *argv[])
 {
 	int result;
+	int i;
 
 	if (argc == 3)
 	{
-		result = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d \n", result);
-		return (0);
+		for (i = 1; i < argc; i++)
+		{
+			result = atoi(argv[1]) * atoi(argv[2]);
+			printf("%d \n", result);
+			return (0);
+		}
 	}
-	printf("Error\n");
-	return (1);
+	else
+	{
+		printf("Error\n");
+		return (1);
+
+	}
 
 }
