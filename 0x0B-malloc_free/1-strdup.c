@@ -16,17 +16,16 @@ char *_strdup(char *str)
 	unsigned int len, i;
 	char *buf;
 
-	for (i = 0; str[i] != 0; i++)
-	{
-		len++;
-	}
-
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		len++;
+	}
 
-	buf = malloc(len + 1);
+	buf = malloc(len);
 
 	if (buf == NULL)
 	{
@@ -37,6 +36,5 @@ char *_strdup(char *str)
 	{
 		buf[i] = str[i];
 	}
-	buf[i] = '\0';
 	return (buf);
 }
