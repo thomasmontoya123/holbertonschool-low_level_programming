@@ -14,8 +14,12 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int size1 = 0, size2 = 0, i, concatsize = 0, j;
+	unsigned int size1, size2, i, concatsize, j;
 	char *concat;
+
+	size1 = 0;
+	size2 = 0;
+	concatsize = 0;
 
 	for (i = 0; s1[i] != '\0'; i++)
 	{
