@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	unsigned int len, i;
 	char *buf;
 
-	for (i = 0; str [i] != 0; i++)
+	for (i = 0; str[i] != 0; i++)
 	{
 		len++;
 	}
