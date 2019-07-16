@@ -1,6 +1,16 @@
 #include <stdlib.h>
 #include "holberton.h"
 
+/**
+ * create_array - returns a pointer to a newly allocated space in memory
+ *
+ * @size: size for malloc
+ * @c: character
+ *
+ * Return: int
+ *
+ */
+
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
