@@ -37,6 +37,5 @@ char *_strdup(char *str)
 	{
 		buf[i] = str[i];
 	}
-	buf[i] = '\0';
 	return (buf);
 }
