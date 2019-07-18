@@ -4,8 +4,9 @@
 /**
  * _realloc - reallocates a memory block using malloc and free
  *
- * @min: minimum  int (included)
- * @max: max int (included)
+ * @ptr: original pointer
+ * @old_size: size of ptr
+ * @new_size: new size
  *
  * Return: pointer to the new block of memory
  *
@@ -15,12 +16,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *newptr;
 	unsigned int i;
-	unsigned size;
+	unsigned int size;
 
 	if (new_size == old_size)
-	{
 		return (ptr);
-	}
 
 	if (new_size == 0 && ptr != NULL)
 	{
@@ -37,14 +36,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	newptr = malloc(new_size * sizeof(char));
 
 	if (newptr == NULL)
-	{
 		return (ptr);
-	}
 
 	if (old_size > new_size)
-	{
 		size = new_size;
-	}
 	else
 	{
 		size = old_size;
@@ -54,7 +49,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		newptr[i] = *((int *)ptr + i);
 	}
-	free (ptr);
+	free(ptr);
 	return (newptr);
 }
 
