@@ -39,6 +39,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpname, *cpowner;
 	unsigned int namesize, ownersize, i;
 
+	ndog = malloc(sizeof(dog_t));
+	if (ndog == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; name[i] != '\0'; i++)
 	{
 		namesize++;
@@ -47,21 +52,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		ownersize++;
 	}
-	ndog = malloc(sizeof(dog_t));
-	if (ndog == NULL)
-	{
-		free(ndog);
-		return (NULL);
-	}
 	ndog->age = age;
-	cpname = malloc(sizeof(char *) * (namesize + 1));
+	cpname = malloc(sizeof(char) * (namesize + 1));
 	if (cpname == NULL)
 	{
 		free(ndog);
 		return (NULL);
 	}
 	cpname = _strcpy(cpname, name);
-	cpowner = malloc(sizeof(char *) * (ownersize + 1));
+	cpowner = malloc(sizeof(char) * (ownersize + 1));
 	if (cpowner == NULL)
 	{
 		free(cpname);
