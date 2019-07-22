@@ -13,16 +13,14 @@ struct dog
 	float age;
 	char *owner;
 };
-
-int _putchar(char c);
-
-void init_dog(struct dog *d, char *name, float age, char *owner);
-
-void print_dog(struct dog *d);
 /**
  * struc dog - Typedef
  */
 typedef struct dog dog_t;
+
+void print_dog(struct dog *d);
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 dog_t *new_dog(char *name, float age, char *owner);
 
