@@ -35,15 +35,10 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ndog;
+	int namesize, ownersize, i;
 	char *cpname, *cpowner;
-	unsigned int namesize, ownersize, i;
+	dog_t *ndog;
 
-	ndog = malloc(sizeof(struct dog));
-	if (ndog == NULL)
-	{
-		return (NULL);
-	}
 	for (i = 0; name[i] != '\0'; i++)
 	{
 		namesize++;
@@ -51,6 +46,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; owner[i] != '\0'; i++)
 	{
 		ownersize++;
+	}
+	ndog = malloc(sizeof(struct dog));
+	if (ndog == NULL)
+	{
+		return (NULL);
 	}
 	cpname = malloc(sizeof(char) * (namesize + 1));
 	if (cpname == NULL)
