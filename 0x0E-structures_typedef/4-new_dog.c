@@ -39,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpname, *cpowner;
 	unsigned int namesize, ownersize, i;
 
-	ndog = malloc(sizeof(dog_t));
+	ndog = malloc(sizeof(struct dog));
 	if (ndog == NULL)
 	{
 		return (NULL);
