@@ -13,32 +13,23 @@ int main(int argc, char *argv[])
 {
 	int a, b;
 	int result;
-	char *opFunction, op;
-	int (*action)(int, int);
+	char op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
 	op = argv[2][0];
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	opFunction = argv[2];
-	action = get_op_func(opFunction);
-	if (action == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
 
 	if (b == 0 && (op == '/' || op == '%'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	result = (*action)(a, b);
+	result = (*get_op_func(argv[2]))(a, b);
 	printf("%i\n", result);
 
 	return (0);
