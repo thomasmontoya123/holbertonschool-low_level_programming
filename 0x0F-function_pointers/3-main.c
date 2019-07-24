@@ -30,13 +30,13 @@ int main(int argc, char *argv[])
 	if (action == NULL)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	if (b == 0 && (op == '/' || op == '%'))
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 	result = (*action)(a, b);
 	printf("%i\n", result);
