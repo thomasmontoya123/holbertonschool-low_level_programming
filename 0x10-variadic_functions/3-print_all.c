@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	char *stringCase;
 	va_list valist;
 
-	if (format == NULL)
+	while (format == NULL)
 	{
 		printf("\n");
 		return;
@@ -25,23 +25,23 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-			printf("%c", va_arg(valist, int));
-			break;
-			case 'i':
-			printf("%i", va_arg(valist, int));
-			break;
-			case 'f':
-			printf("%f", va_arg(valist, double));
-			break;
-			case 's':
-			stringCase = va_arg(valist, char *);
-			while (stringCase != NULL)
-			{
-				printf("%s", stringCase);
+				printf("%c", va_arg(valist, int));
 				break;
-			}
-			printf("(nil)");
-			break;
+			case 'i':
+				printf("%i", va_arg(valist, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(valist, double));
+				break;
+			case 's':
+				stringCase = va_arg(valist, char *);
+				if (stringCase != NULL)
+				{
+					printf("%s", stringCase);
+					break;
+				}
+				printf("(nil)");
+				break;
 		}
 		if (format[i + 1] != '\0' && (format[i] == 'c' || format[i] == 'i'
 		|| format[i] == 'f' || format[i] == 's'))
