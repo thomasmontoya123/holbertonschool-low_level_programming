@@ -35,12 +35,12 @@ void print_all(const char * const format, ...)
 			break;
 			case 's':
 			stringCase = va_arg(valist, char *);
-			while (stringCase == NULL)
+			while (stringCase != NULL)
 			{
-				printf("(nil)");
+				printf("%s", stringCase);
 				break;
 			}
-			printf("%s", stringCase);
+			printf("(nil)");
 			break;
 		}
 		if (format[i + 1] != '\0' && (format[i] == 'c' || format[i] == 'i'
@@ -48,6 +48,6 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		i++;
 	}
-	va_end(valist);
 	printf("\n");
+	va_end(valist);
 }
