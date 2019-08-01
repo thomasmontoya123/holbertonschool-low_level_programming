@@ -33,13 +33,15 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!(*head))
 	{
 		*head = newNode;
-		return (*head);
+		return (newNode);
 	}
 
-	while (end->next)
-		end = end->next;
+	else
+	{
+		while (end->next)
+			end = end->next;
+	}
 
 	end->next = newNode;
-
 	return (newNode);
 }
