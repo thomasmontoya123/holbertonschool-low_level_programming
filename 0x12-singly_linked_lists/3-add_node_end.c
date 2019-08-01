@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * add_node_ed - Adds a new node at the end of a list_t list.
+ * add_node_end - Adds a new node at the end of a list_t list.
  * @head: first node
  * @str: String
  * Return: addres of new element.
