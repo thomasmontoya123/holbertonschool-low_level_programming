@@ -12,7 +12,7 @@ void free_list(list_t *head)
 {
 	list_t *temporal;
 
-
+	temporal = head;
 	while (temporal)
 	{
 		temporal = head;
