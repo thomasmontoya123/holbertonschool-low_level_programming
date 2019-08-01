@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
+
 /**
  * print_list - print all elements of a list
  *
@@ -25,7 +26,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%d] %s\n", h->len, h->str);
+			printf("[%u] %s\n", h->len, h->str);
 		}
 
 		h = h->next;
