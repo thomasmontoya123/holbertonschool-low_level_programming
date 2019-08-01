@@ -10,6 +10,9 @@ void free_list(list_t *head)
 {
 	list_t *temporal;
 
+	if (!head)
+		return;
+
 	while (head)
 	{
 		temporal = head;
@@ -17,4 +20,5 @@ void free_list(list_t *head)
 		free(temporal->str);
 		free(temporal);
 	}
+
 }
