@@ -12,12 +12,13 @@ int pop_listint(listint_t **head)
 	int deletedNodeValue = 0;
 	listint_t *temporal;
 
-	if (!head)
+	if (!head || !(*head))
 		return (0);
 
 	deletedNodeValue = (*head)->n;
 	temporal = *head;
 	*head = (*head)->next;
+	temporal->next = NULL;
 	free(temporal);
 
 	return (deletedNodeValue);
