@@ -13,8 +13,6 @@ void print_binary(unsigned long int n)
 
 	i = 0;
 
-	if (!n)
-		return;
 
 	if (n == 0)
 		_putchar ('0');
