@@ -21,24 +21,24 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	descriptorFlag = open (filename, O_CREAT | O_WRONLY | O_TRUNC, 0600); /*0600 mean for rw-------*/
+	descriptorFlag = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (descriptorFlag == -1)
 		return (-1);
 
 	if (text_content == NULL)
 	{
-		close (descriptorFlag);
+		close(descriptorFlag);
 		return (1);
 	}
 
 	for (size = 0; text_content[size]; size++)
 		;
 
-	writeFlag =  write (descriptorFlag, text_content, size);
+	writeFlag =  write(descriptorFlag, text_content, size);
 
 	if (writeFlag == -1)
 	{
-		write (1, "fails", 5);
+		write(1, "fails", 5);
 		return (-1);
 	}
 
