@@ -45,15 +45,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!new_node)
 		return (NULL);
 
-	new_node->n = n;
 	temporal = *h;
 
 	while (i != idx - 1)
 	{
 		temporal = temporal->next;
+		if (!temporal)
+			return (NULL);
 		i++;
 
 	}
+	new_node->n = n;
 	new_node->next = temporal->next;
 	temporal->next->prev = new_node;
 	temporal->next = new_node;
