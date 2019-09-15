@@ -3,7 +3,7 @@
 /**
  * get_dnodeint_at_index - return
  * @head: head
- * index: node position
+ * @index: node position
  * Return: address of nth  node
  */
 
