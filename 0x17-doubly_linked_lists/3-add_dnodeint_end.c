@@ -3,7 +3,7 @@
 /**
  * add_dnodeint_end - adds a new node at the end
  * @head: head
- * n: integer data
+ * @n: integer data
  * Return: address of the new element, or NULL if it failed
  */
 
