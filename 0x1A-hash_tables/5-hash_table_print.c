@@ -10,6 +10,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int i, print_counter = 0;
 	hash_node_t *temporal = NULL;
 
+	if (!ht)
+		return;
+
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
