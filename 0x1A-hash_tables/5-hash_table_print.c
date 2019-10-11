@@ -15,14 +15,12 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (!ht->array[i])
 			continue;
-		if (print_counter > 0)
-			printf(", ");
 
 		for (temporal = ht->array[i]; temporal; temporal = temporal->next)
 		{
+			if (print_counter > 0)
+				printf(", ");
 			printf("'%s': '%s'", temporal->key, temporal->value);
-			if (temporal->next)
-				printf(" ,");
 			print_counter++;
 		}
 	}
