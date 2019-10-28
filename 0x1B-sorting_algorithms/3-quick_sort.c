@@ -28,7 +28,7 @@ void swaper(int array[], int i, int j)
 
 int lomuto(int array[], int low, int hight, int size)
 {
-	int pivot, i, j;
+	int pivot, i, j, flag = 0;
 
 	pivot = array[hight];
 	i = low - 1;
@@ -39,10 +39,18 @@ int lomuto(int array[], int low, int hight, int size)
 		{
 			i++;
 			swaper(array, i, j);
+			if (i != j)
+			{
+				flag = 0;
+				print_array(array, size);
+			}
+			if (i == j)
+				flag = 1;
 		}
 	}
 	swaper(array, i + 1, hight);
-	print_array(array, size);
+	if (i != j && flag == 0)
+		print_array(array, size);
 
 	return (i + 1);
 
