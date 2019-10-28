@@ -10,7 +10,7 @@
 void empty_list_checker(int *array, size_t size)
 {
 	if (!array || size < 2)
-		exit(EXIT_SUCCESS);
+		exit(41);
 }
 
 /**
