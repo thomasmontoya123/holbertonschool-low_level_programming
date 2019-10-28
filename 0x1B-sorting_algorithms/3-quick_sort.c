@@ -47,6 +47,7 @@ int lomuto(int array[], int low, int hight, int size)
 			if (i == j)
 				flag = 1;
 		}
+		flag = 0;
 	}
 	if (array[i + 1] != array[hight])
 	{
