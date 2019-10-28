@@ -3,20 +3,18 @@
 /**
  * swaper - swaps position values
  * @array: array
- * @size: size of the arry
  * @i: value to swap
  * @j: value to swap
  * Return: void
  */
 
-void swaper(int array[], int i, int j, size_t size)
+void swaper(int array[], int i, int j)
 {
 	int holder = 0;
 
 	holder = array[i];
 	array[i] = array[j];
 	array[j] = holder;
-	print_array(array, size);
 }
 
 /**
@@ -40,10 +38,12 @@ int lomuto(int array[], int low, int hight, int size)
 		if (array[j] < pivot)
 		{
 			i++;
-			swaper(array, i, j, size);
+			swaper(array, i, j);
 		}
 	}
-	swaper(array, i + 1, hight, size);
+	swaper(array, i + 1, hight);
+	print_array(array, size);
+
 	return (i + 1);
 
 
