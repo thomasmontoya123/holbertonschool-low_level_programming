@@ -12,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 
 	temporal = *list;
 
-	if (!list || !(*list)->next)
+	if (!list || (*list)->next == NULL)
 		return;
 
 
