@@ -4,6 +4,19 @@
  * selection_sort - Selection sort algorithm
  * @array: Array of Ints
  * @size: Array's size
+ * Return: void
+ */
+
+void empty_list_checker(int *array, size_t size)
+{
+	if (!array || size < 2)
+		exit(EXIT_FAILURE);
+}
+
+/**
+ * selection_sort - Selection sort algorithm
+ * @array: Array of Ints
+ * @size: Array's size
  * Return: Nothing
  */
 
@@ -12,8 +25,7 @@ void selection_sort(int *array, size_t size)
 	unsigned int i, j, h, pos = 0, change;
 	int value_1 = 0, value_2 = 0, breaker;
 
-	if (!array || size < 2)
-		return;
+	empty_list_checker(array, size);
 	for (i = 0; i < size; i++)
 	{
 		h = 0;
