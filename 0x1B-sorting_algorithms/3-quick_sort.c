@@ -52,7 +52,7 @@ int lomuto(int array[], int low, int hight, int size)
 	{
 		swaper(array, i + 1, hight);
 		if (i != j && flag == 0)
-		print_array(array, size);
+			print_array(array, size);
 	}
 	return (i + 1);
 
