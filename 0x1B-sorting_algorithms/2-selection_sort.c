@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * selection_sort - Selection sort algorithm
+ * empty_list_checker - checks for valid array
  * @array: Array of Ints
  * @size: Array's size
  * Return: void
