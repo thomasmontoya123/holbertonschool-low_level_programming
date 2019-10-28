@@ -10,17 +10,13 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temporal = NULL;
 
-	temporal = *list;
-
 	if (!list)
 		return;
-
-	else if ((*list)->next == NULL)
+	if ((*list)->next == NULL)
 		return;
 
-
+	temporal = *list;
 	temporal = temporal->next;
-
 
 	for (; temporal; temporal = temporal->next)
 	{
