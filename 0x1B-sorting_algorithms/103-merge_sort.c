@@ -89,4 +89,5 @@ void merge_sort(int *array, size_t size)
 		copy_array[i] = array[i];
 
 	top_down_merge_split(copy_array, 0, size, array);
+	free(copy_array);
 }
