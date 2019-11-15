@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 
 def conections(grid, row, column, row_size, column_size):
     number_of_connections = 0
