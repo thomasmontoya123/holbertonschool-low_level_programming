@@ -9,10 +9,10 @@ def conections(grid, row, column, row_size, column_size):
     if column > 0:
         if grid[row][column - 1] == 1:
             number_of_connections += 1
-    if column < column_size:
+    if column < column_size - 1:
         if grid[row][column + 1] == 1:
             number_of_connections += 1
-    if row < column_size:
+    if row < row_size - 1:
         if grid[row + 1][column] == 1:
             number_of_connections += 1
 
