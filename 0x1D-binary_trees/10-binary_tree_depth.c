@@ -13,7 +13,7 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	int parent_counter = 0;
 
 	if (!tree)
-		return (NULL);
+		return (0);
 
 	temporal = tree;
 
